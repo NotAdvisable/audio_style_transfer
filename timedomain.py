@@ -155,7 +155,7 @@ def compute_features(content,
             [1, n_fft // 2])
         freqs = np.dot(p, k)
         inputs, net = compute_inputs(x, freqs, n_fft, n_frames, input_features, norm)
-        sess.run(tf.global_variables_initializer())
+        sess.run(tf.compat.v1.global_variables_initializer())
         content_feature = net.eval(feed_dict={x: content_tf})
         content_features.append(content_feature)
         style_feature = inputs['mags'].eval(feed_dict={x: style_tf})
@@ -240,7 +240,7 @@ def compute_stylization(kernels,
                 loss, method='L-BFGS-B', options={'maxiter': iterations})
             # Optimization
             with tf.compat.v1.Session() as sess:
-                sess.run(tf.global_variables_initializer())
+                sess.run(tf.compat.v1.global_variables_initializer())
                 print('Started optimization.')
                 opt.minimize(sess)
                 result = x.eval()
@@ -249,7 +249,7 @@ def compute_stylization(kernels,
                 learning_rate=learning_rate).minimize(loss)
             # Optimization
             with tf.compat.v1.Session() as sess:
-                sess.run(tf.global_variables_initializer())
+                sess.run(tf.compat.v1.global_variables_initializer())
                 print('Started optimization.')
                 for i in range(iterations):
                     s, c, l, _ = sess.run([style_loss, content_loss, loss, opt])
