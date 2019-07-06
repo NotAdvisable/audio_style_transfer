@@ -229,7 +229,7 @@ def compute_stylization(kernels,
             net = tf.nn.relu(conv)
             content_loss = content_loss + \
                 alpha * 2 * tf.nn.l2_loss(net - content_features[layer_i + 1])
-            _, height, width, number = map(lambda i: i.value, net.get_shape())
+            _, height, width, number = map(lambda i: i, net.get_shape())
             feats = tf.reshape(net, (-1, number))
             gram = tf.matmul(tf.transpose(feats), feats) / (n_frames)
             style_loss = style_loss + 2 * tf.nn.l2_loss(gram - style_gram[
