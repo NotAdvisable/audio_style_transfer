@@ -227,7 +227,7 @@ def compute_stylization(kernels, n_samples, n_frames, content_features, style_gr
                 opt.minimize(sess)
                 result = x.eval()
         else:
-            opt = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss)
+            opt = tf.compat.v1.train.AdamOptimizer(learning_rate=learning_rate).minimize(loss)
             # Optimization
             with tf.compat.v1.Session() as sess:
                 sess.run(tf.compat.v1.global_variables_initializer())
