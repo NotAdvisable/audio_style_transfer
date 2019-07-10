@@ -267,6 +267,7 @@ def run(content_fname, style_fname, output_fname, norm=False, input_features=['r
     librosa.output.write_wav(output_fname, signal, sr=sampleRate)
     signal = utils.limiter(signal)
     librosa.output.write_wav(output_fname + '.limiter.wav', signal, sr=sampleRate)
+    print('Done.')
 
 
 def batch(content_path, style_path, output_path, model):
