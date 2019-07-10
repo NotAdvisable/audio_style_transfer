@@ -156,6 +156,8 @@ def compute_features(content, style, input_features, norm=False, stride=1, n_lay
         style_gram = np.matmul(features.T, features) / (n_frames)
         style_features.append(style_gram)
 
+         print('compute festures ', 'content feature: ', content_feature, 'style feature: ', style_feature, 'style gram: ', style_gram, end='\r')
+
         for layer_i in range(n_layers):
             if layer_i == 0:
                 std = np.sqrt(2) * np.sqrt(2.0 / ((n_fft / 2 + n_filters) * kernel_width))
@@ -178,6 +180,8 @@ def compute_features(content, style, input_features, norm=False, stride=1, n_lay
             style_gram = np.matmul(features.T, features) / (n_frames)
             style_features.append(style_gram)
 
+            print('compute festures ', 'layer: ', layer_i, 'content feature: ', content_feature, 'style feature: ', style_feature, 'style gram: ', style_gram, end='\r')
+
     return content_features, style_features, kernels, freqs
 
 
@@ -194,6 +198,8 @@ def compute_stylization(kernels, n_samples, n_frames, content_features, style_gr
         gram = tf.matmul(tf.transpose(feats), feats) / (n_frames)
 
         style_loss = 2 * tf.nn.l2_loss(gram - style_gram[0])
+        
+        print('compute stylization ', 'content loss: ', content_loss, 'style loss: ', style_loss, 'gram: ', gram, end='\r')
 
         for layer_i in range(n_layers):
             kernel_tf = tf.constant( kernels[layer_i], name="kernel{}".format(layer_i), dtype='float32')
@@ -207,6 +213,8 @@ def compute_stylization(kernels, n_samples, n_frames, content_features, style_gr
             feats = tf.reshape(net, (-1, number))
             gram = tf.matmul(tf.transpose(feats), feats) / (n_frames)
             style_loss = style_loss + 2 * tf.nn.l2_loss(gram - style_gram[layer_i + 1])
+
+            print('compute stylization ', 'layer: ', layer_i, 'content loss: ', content_loss, 'style loss: ', style_loss, 'gram: ', gram, end='\r')
                 
         loss = content_loss + style_loss
 
