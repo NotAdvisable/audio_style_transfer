@@ -199,7 +199,7 @@ def compute_stylization(kernels, n_samples, n_frames, content_features, style_gr
 
         style_loss = 2 * tf.nn.l2_loss(gram - style_gram[0])
         
-        print('compute stylization ', 'content loss: ', content_loss, 'style loss: ', style_loss, 'gram: ', gram, end='\r')
+        print('compute stylization ', 'content loss: ', content_loss, 'style loss: ', style_loss)
 
         for layer_i in range(n_layers):
             kernel_tf = tf.constant( kernels[layer_i], name="kernel{}".format(layer_i), dtype='float32')
@@ -214,7 +214,7 @@ def compute_stylization(kernels, n_samples, n_frames, content_features, style_gr
             gram = tf.matmul(tf.transpose(feats), feats) / (n_frames)
             style_loss = style_loss + 2 * tf.nn.l2_loss(gram - style_gram[layer_i + 1])
 
-            print('compute stylization ', 'layer: ', layer_i, 'content loss: ', content_loss, 'style loss: ', style_loss, 'gram: ', gram, end='\r')
+            print('compute stylization ', 'layer: ', layer_i, 'content loss: ', content_loss, 'style loss: ', style_loss)
                 
         loss = content_loss + style_loss
 
