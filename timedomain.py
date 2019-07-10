@@ -156,7 +156,7 @@ def compute_features(content, style, input_features, norm=False, stride=1, n_lay
         style_gram = np.matmul(features.T, features) / (n_frames)
         style_features.append(style_gram)
 
-         print('compute festures ', 'content feature: ', content_feature, 'style feature: ', style_feature, 'style gram: ', style_gram, end='\r')
+        print('compute festures ', 'content feature: ', content_feature, 'style feature: ', style_feature, 'style gram: ', style_gram, end='\r')
 
         for layer_i in range(n_layers):
             if layer_i == 0:
