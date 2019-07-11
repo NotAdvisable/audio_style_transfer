@@ -5,4 +5,5 @@ As the title of this page might suggest, I spend the last semester learning abou
 The problem I spend time on working was audio style transfer. Like normal image style transfer, audio style transfer takes two files, a content and a style, and tries to adjust the content file in a way that it fits the style.
 To gain a deeper understanding of the general concepts of style transfer, I also worked on image style transfer a bit. Here’s an example to help clarify the concept.
 
-<img src="/assets/img/imageStyleTransfer.png" alt="">
+
+![](assets/img/imageStyleTransfer.png "Lisbon's starry night")
