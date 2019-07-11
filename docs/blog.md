@@ -7,3 +7,10 @@ The problem I spend time on working was audio style transfer. Like normal image 
 To gain a deeper understanding of the general concepts of style transfer, I also worked on image style transfer a bit. Here’s an example to help clarify the concept.
 
 ![Lisbon's Starry Night - Image Style Transfer](https://notadvisable.github.io/audio_style_transfer/assets/imageStyleTransfer.png)
+
+
+
+
+<audio controls>
+  <source src="https://notadvisable.github.io/audio_style_transfer/assets/female_talking.wav" type="audio/wav">
+</audio> 
