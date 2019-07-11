@@ -8,9 +8,4 @@ To gain a deeper understanding of the general concepts of style transfer, I also
 
 ![Lisbon's Starry Night - Image Style Transfer](https://notadvisable.github.io/audio_style_transfer/assets/imageStyleTransfer.png)
 
-
-
-
-<audio controls>
-  <source src="https://notadvisable.github.io/audio_style_transfer/assets/female_talking.wav" type="audio/wav">
-</audio> 
+My project deals with translating this approach of style transfer from images to audio. However, since this was technically my first ML project, I used [this seedbank seed](https://research.google.com/seedbank/seed/audio_style_transfer) by Parag K. Mital as a basis. The author of the seed shows a novel approach that expands on [the work](https://dmitryulyanov.github.io/audio-texture-synthesis-and-style-transfer/) of Dmitry Ulyanov and Vadim Lebedev and is able to generate results that are a lot less noisy.
