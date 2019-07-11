@@ -1,3 +1,4 @@
 theme: jekyll-theme-slate
 title: Audio Style Transfer
 description: A machine learning project created for the "Creating Rich User Experiences with Applied Machine Learning" elective at the Darmstadt University of Applied Sciences
+{% include open-embed.html %}
