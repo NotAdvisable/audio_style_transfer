@@ -34,10 +34,20 @@ The source code of the seed project was mostly hosted on GitHub. So, I started o
 
 I started my own colab notebook and GitHub repository and started setting up the project. I improved on the spectrogram visualisation by adding more functionalities like optional labels.
 Next, I prepared some audio files for the transfer. I first tried doing style transfer on two pop songs. Eminem’s Rap God and Katy Perry’s Teenage Dream. I intentionally went for opposites to see how far I can push the model. As I expected however, these two songs didn’t mix well. There was just too much going on in both. Additionally, in this example, I used a high alpha value that adds additional weight to the content.
-Here’s the result:
-Content:
-Style:
-Result:
+Here’s the result:  
+
+Content:  
+<audio controls>
+  <source src="https://notadvisable.github.io/audio_style_transfer/assets/eminem_short_amp.wav" type="audio/wav">
+</audio> 
+Style:  
+<audio controls>
+  <source src="https://notadvisable.github.io/audio_style_transfer/assets/katyperry_short_amp.wav" type="audio/wav">
+</audio> 
+Result:  
+<audio controls>
+  <source src="https://notadvisable.github.io/audio_style_transfer/assets/eminemKaty.mp3" type="audio/mp3">
+</audio> 
 
 I realised that the style specifically needs to be of a simpler form to lead to clearer results. Instead of pop music, I opted for classic music for my prototype. I picked a Mozart song solely containing classical instruments. I used that sample as style, and a sample of a woman talking as the content. to prevent the content from poking through, I set the alpha to 0.001 and added another layer to the shallow neural network. I tried using another optimiser, but the Adam optimiser simply lead to a lot more noise and destroyed the structure of the clips, so I stuck with the BFGS optimiser instead.
 Here’s the result of this trial:  
@@ -58,8 +68,10 @@ Result:
 As expected, this trial led to a much more promising result. You can hear the Mozart piece matching the speech pattern of the woman. 
 
 ### Closing Words
-I tried around a lot with additional sets of content and style and tweaking everything until the result was making sense was quite the enjoyable experience. I occasionally ran into the problem of running out of RAM which forced me to restart the entire process, though.
-[Pic of ram]
+I tried around a lot with additional sets of content and style and tweaking everything until the result was making sense was quite the enjoyable experience. I occasionally ran into the problem of running out of RAM which forced me to restart the entire process, though.  
+
+![Available Ram](https://notadvisable.github.io/audio_style_transfer/assets/img/MLavailableRam.PNG)
+
 In any case, I can recommend playing around with the colab notebook in this repository yourself!
 
 
