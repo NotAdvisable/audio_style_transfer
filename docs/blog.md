@@ -49,6 +49,8 @@ Result:
   <source src="https://notadvisable.github.io/audio_style_transfer/assets/eminemKaty.mp3" type="audio/mp3">
 </audio> 
 
+![Spectrogram](https://notadvisable.github.io/audio_style_transfer/assets/img/eminemKaty.png)
+
 I realised that the style specifically needs to be of a simpler form to lead to clearer results. Instead of pop music, I opted for classic music for my prototype. I picked a Mozart song solely containing classical instruments. I used that sample as style, and a sample of a woman talking as the content. to prevent the content from poking through, I set the alpha to 0.001 and added another layer to the shallow neural network. I tried using another optimiser, but the Adam optimiser simply lead to a lot more noise and destroyed the structure of the clips, so I stuck with the BFGS optimiser instead.
 Here’s the result of this trial:  
 
