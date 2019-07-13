@@ -9,6 +9,8 @@ I added some example audio files to the assets folder which will be cloned too s
 
 This work is based on pkmital/time-domain-neural-audio-style-transfer
 
+The blog post to this project can be found [here](https://notadvisable.github.io/audio_style_transfer/docs/blog).
+
 Enjoy!
 
 ![Spectrogram](https://notadvisable.github.io/audio_style_transfer/assets/img/talkingMozart.png)
