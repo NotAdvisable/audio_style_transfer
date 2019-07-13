@@ -1,4 +1,15 @@
-# audio_transfer
-updated version of pkmital/time-domain-neural-audio-style-transfer that doesn't trigger deprecation warnings
+# Audio Style Transfer
+A machine learning project created for the "Creating Rich User Experiences with Applied Machine Learning" elective at the Darmstadt University of Applied Sciences
 
-![Lisbon's Starry Night - Image Style Transfer](/assets/imageStyleTransfer.png)
+## Installation
+All you really need to do to get this project to run is clone the AudioStyleTransfer.ipynb colab notebook and open it in colab. All the other necessary parts get cloned in the notebook itself.
+
+## Additional Information
+I added some example audio files to the assets folder which will be cloned too so you can simple use them.  
+
+This work is based on pkmital/time-domain-neural-audio-style-transfer
+
+Enjoy!
+
+![Spectrogram](https://notadvisable.github.io/audio_style_transfer/assets/img/talkingMozart.png)
+
