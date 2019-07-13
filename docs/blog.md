@@ -65,6 +65,8 @@ Result:
   <source src="https://notadvisable.github.io/audio_style_transfer/assets/talkingMozart2.mp3" type="audio/mp3">
 </audio> 
 
+![Spectrogram](https://notadvisable.github.io/audio_style_transfer/assets/img/talkingMozart.png)
+
 As expected, this trial led to a much more promising result. You can hear the Mozart piece matching the speech pattern of the woman. 
 
 ### Closing Words
@@ -73,8 +75,3 @@ I tried around a lot with additional sets of content and style and tweaking ever
 ![Available Ram](https://notadvisable.github.io/audio_style_transfer/assets/img/MLavailableRam.PNG)
 
 In any case, I can recommend playing around with the colab notebook in this repository yourself!
-
-
-
-
-
